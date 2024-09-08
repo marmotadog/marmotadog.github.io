@@ -1,0 +1,258 @@
+<html>
+    <head>
+        <title>Makka Pakka</title>
+        <script>
+            var b=[ ["li","鋰"],
+                    ["na","鈉"],
+                    ["rb","銣"],
+                    ["cs","銫"],
+                    ["fr","鍅"],
+                    ["be","鈹"],
+                    ["mg","鎂"],
+                    ["ca","鈣"],
+                    ["sr","鍶"],
+                    ["ba","鋇"],
+                    ["ra","鐳"],
+                    ["sc","鈧"],
+                    ["ti","鈦"],
+                    ["zr","鋯"],
+                    ["hf","鉿"],
+                    ["rf","鑪"],
+                    ["nb","鈮"],
+                    ["ta","鉭"],
+                    ["db","𨧀"],
+                    ["cr","鉻"],
+                    ["mo","鉬"],
+                    ["sg","𨭎"],
+                    ["mn","錳"],
+                    ["tc","鎝"],
+                    ["re","錸"],
+                    ["bh","𨨏"],
+                    ["fe","鐵"],
+                    ["ru","釕"],
+                    ["os","鋨"],
+                    ["hs","𨭆"],
+                    ["co","鈷"],
+                    ["rh","銠"],
+                    ["ir","銥"],
+                    ["mt","䥑"],
+                    ["ni","鎳"],
+                    ["pd","鈀"],
+                    ["pt","鉑"],
+                    ["ds","鐽"],
+                    ["cu","銅"],
+                    ["ag","銀"],
+                    ["au","金"],
+                    ["rg","錀"],
+                    ["zn","鋅"],
+                    ["cd","鎘"],
+                    ["hg","汞"],
+                    ["cn","鎶"],
+                    ["al","鋁"],
+                    ["ga","鎵"],
+                    ["in","銦"],
+                    ["tl","鉈"],
+                    ["nh","鉨"],
+                    ["si","矽"],
+                    ["ge","鍺"],
+                    ["sn","錫"],
+                    ["pb","鉛"],
+                    ["fl","鈇"],
+                    ["as","砷"],
+                    ["sb","銻"],
+                    ["bi","鉍"],
+                    ["mc","鏌"],
+                    ["se","硒"],
+                    ["te","碲"],
+                    ["po","釙"],
+                    ["lv","鉝"],
+                    ["cl","氯"],
+                    ["br","溴"],
+                    ["at","砈"],
+                    ["ts","ㄊㄧㄢˊ"],
+                    ["he","氦"],
+                    ["ne","氖"],
+                    ["ar","氬"],
+                    ["kr","氪"],
+                    ["xe","氙"],
+                    ["rn","氡"],
+                    ["og","ㄠˋ"],
+                    ["la","鑭"],
+                    ["ce","鈰"],
+                    ["pr","鐠"],
+                    ["nd","釹"],
+                    ["pm","鉕"],
+                    ["sm","釤"],
+                    ["eu","銪"],
+                    ["gd","釓"],
+                    ["tb","鋱"],
+                    ["dy","鏑"],
+                    ["ho","鈥"],
+                    ["er","鉺"],
+                    ["tm","銩"],
+                    ["yb","鐿"],
+                    ["lu","鎦"],
+                    ["ac","錒"],
+                    ["th","釷"],
+                    ["pa","鏷"],
+                    ["np","錼"],
+                    ["pu","鈽"],
+                    ["am","鋂"],
+                    ["cm","鋦"],
+                    ["bk","鉳"],
+                    ["cf","鉲"],
+                    ["es","鑀"],
+                    ["fm","鐨"],
+                    ["md","鍆"],
+                    ["no","鍩"],
+                    ["lr","鐒"],
+                    ["h","氫"],
+                    ["k","鉀"],
+                    ["y","釔"],
+                    ["v","釩"],
+                    ["w","鎢"],
+                    ["b","硼"],
+                    ["c","碳"],
+                    ["n","氮"],
+                    ["p","磷"],
+                    ["o","氧"],
+                    ["s","硫"],
+                    ["f","氟"],
+                    ["i","碘"],
+                    ["u","鈾"]];
+            var ipt=document.querySelector("#into");
+            function onin(){
+                if(document.querySelector("#en").classList.value=="onc") macabaca();
+                else micawaca();
+            };
+            function en(x){
+                let a=document.querySelector("#en");
+                let b=document.querySelector("#ch");
+                if(x==0){
+                    a.classList.remove("onc");
+                    b.classList.add("onc");
+                    micawaca();
+                }
+                else {
+                    a.classList.add("onc");
+                    b.classList.remove("onc");
+                    macabaca();
+                }
+            }
+            function macabaca() {
+                var a=document.querySelector('#into').value,c='',d,e,f;
+                a=a.toLocaleLowerCase();
+                if(a==null||"") window.alert("已取消輸入");
+                else {
+                    for(let i=0;i<118;i++){
+                        a=a.replaceAll(b[i][0],b[i][1]);
+                    }
+                    document.querySelector('#trans').value=a;
+                };
+            }
+            function cop(){
+                const a = document.querySelector('#trans');
+                a.select();
+                document.execCommand('copy');
+                alert("已複製");
+            }
+            function micawaca(){
+                var a=document.querySelector('#into').value,c,e,d;
+                if(a==null||"") window.alert("已取消輸入");
+                else {
+                    for(let i=0;i<118;i++){
+                        a=a.replaceAll(b[i][1],b[i][0]);
+                    }
+                    document.querySelector('#trans').value=a;
+                }
+            }
+        </script>
+        <style>
+            body {
+                background-color: #181818;
+                color:#e8e8e8;
+            }
+            h1{
+                font-size: 700%;
+                margin: 0%;
+            }
+            a{
+                font-size: 400%;
+                border-radius: 10px;
+                border: 3px solid #e8e8e8;
+                background-color: #303030;
+                padding: 0.75%;
+                margin-right: 1%;
+                user-select: none;
+            }
+            a:hover{
+                background-color: #737373;
+            }
+            input{
+                font-size: 400%;
+                border-radius: 10px;
+            }
+            p{
+                font-size: 300%;
+                display: inline;
+            }
+            div{
+                margin-top: 2.5%;
+                margin-bottom: 2.5%;
+            }
+            .onc{
+                background-color: #b16666;
+            }
+            .onc:hover{
+                background-color: #b16666;
+            }
+            * {
+                font-family: "Comic Sans MS", 標楷體;
+            }
+            ::-webkit-scrollbar-track{
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                border-radius: 10px;
+                background-color: #333333;
+            }
+            ::-webkit-scrollbar-thumb {
+                cursor: default;
+                background-color: #a1a1a1;
+                border-radius: 10px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background-color: #888888;
+            }
+            ::-webkit-scrollbar {
+                width: 10px;
+                height: 10px;
+            }
+        </style>
+    </head>
+    <body>
+            <div>
+                <h1>In the night garden!</h1>
+            </div>
+            <div>
+                <p>輸入文字：</p>
+                <input value="" id="into" oninput="onin()">
+            </div>
+            <div>
+                <a onclick="en(1)" id="en" class="onc">Makka Pakka</a>
+                <a onclick="en(0)" id="ch">Mikka Wakka</a>
+            </div>
+            <div>
+                <p>轉換到這：</p>
+                <input value="" id="trans"readonly>
+            </div>
+            <div>
+                <a onclick="cop()">Copy!</a>
+            </div>
+            <div>
+                <p>花園寶寶語：</p>
+                <br>
+                <p>Makka Pakka:英轉中</p>
+                <br>
+                <p>Mikka Wakka:中轉英</p>
+            </div>
+    </body>
+</html>
