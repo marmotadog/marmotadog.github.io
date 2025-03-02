@@ -119,7 +119,7 @@
                     let paragraphWithChinesePunctuation = '    ' + trimmedParagraph;
                     
                     // Replace ? with ？ and ! with ！
-                    paragraphWithChinesePunctuation = paragraphWithChinesePunctuation.replace(/\?/g, '？').replace(/!/g, '！');
+                    paragraphWithChinesePunctuation = paragraphWithChinesePunctuation.replace(/\?/g, '？').replace(/!/g, '！').replace(/:/g, '：');
                     
                     return paragraphWithChinesePunctuation;
                 }).join('\n'); // Join the paragraphs back
